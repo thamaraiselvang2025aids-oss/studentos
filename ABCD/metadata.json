@@ -1,0 +1,6 @@
+{
+  "name": "StudentOS AI",
+  "description": "An all-in-one personal AI operating system for students to manage academics, hackathons, projects, documents, achievements, career twins, and AI memories.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

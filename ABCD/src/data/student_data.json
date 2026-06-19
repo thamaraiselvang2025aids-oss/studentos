@@ -1,0 +1,310 @@
+{
+  "profile": {
+    "name": "selvan",
+    "college": "Stanford University",
+    "major": "Computer Science & AI",
+    "gpa": "3.92",
+    "semester": "6th Semester",
+    "skills": [
+      "Python",
+      "Dart",
+      "Flutter",
+      "Firebase",
+      "TypeScript",
+      "TailwindCSS",
+      "TensorFlow",
+      "FastAPI"
+    ]
+  },
+  "subjects": [
+    {
+      "id": "sub1",
+      "name": "Structures & Algorithms",
+      "code": "CS-301",
+      "attendance": 94,
+      "targetAttendance": 85,
+      "score": 92,
+      "studyHours": 12
+    },
+    {
+      "id": "sub2",
+      "name": "Machine Learning Concepts",
+      "code": "CS-352",
+      "attendance": 88,
+      "targetAttendance": 85,
+      "score": 95,
+      "studyHours": 18
+    },
+    {
+      "id": "sub3",
+      "name": "Web Application Engineering",
+      "code": "CS-312",
+      "attendance": 96,
+      "targetAttendance": 85,
+      "score": 89,
+      "studyHours": 8
+    },
+    {
+      "id": "sub4",
+      "name": "Cloud Computing Architectures",
+      "code": "CS-401",
+      "attendance": 78,
+      "targetAttendance": 85,
+      "score": 85,
+      "studyHours": 10
+    }
+  ],
+  "tasks": [
+    {
+      "id": "t1",
+      "title": "Complete ML Term Paper outline",
+      "category": "Academics",
+      "priority": "High",
+      "deadline": "2026-06-14",
+      "status": "In Progress"
+    },
+    {
+      "id": "t2",
+      "title": "Refactor API Router in StudentOS",
+      "category": "Projects",
+      "priority": "Medium",
+      "deadline": "2026-06-12",
+      "status": "In Progress"
+    },
+    {
+      "id": "t3",
+      "title": "Apply for NVIDIA Summer Internship",
+      "category": "Internships",
+      "priority": "High",
+      "deadline": "2026-06-20",
+      "status": "Todo"
+    },
+    {
+      "id": "t4",
+      "title": "Set up FCM Push Notifications",
+      "category": "Hackathons",
+      "priority": "High",
+      "deadline": "2026-06-11",
+      "status": "Done"
+    },
+    {
+      "id": "t5",
+      "title": "Submit Coursera Certificate to Portal",
+      "category": "Academics",
+      "priority": "Low",
+      "deadline": "2026-06-18",
+      "status": "Todo"
+    }
+  ],
+  "projects": [
+    {
+      "id": "p1",
+      "title": "StudentOS Workspace Tool",
+      "description": "All-in-one personal academic manager with cross-platform synchronization.",
+      "problem": "Students lack unified tools for multi-dimensional tracking of grades, hackathons, and career preparedness.",
+      "tech": [
+        "Flutter",
+        "FastAPI",
+        "PostgreSQL",
+        "Gemini AI"
+      ],
+      "codeUrl": "https://github.com/alex-mercer/studentos",
+      "demoUrl": "https://studentos-live.run.app",
+      "progress": 85,
+      "deadline": "2026-07-01",
+      "members": [
+        "Alex Mercer",
+        "Devin Smith"
+      ]
+    },
+    {
+      "id": "p2",
+      "title": "MedAI Diagnostix Engine",
+      "description": "AI-based diabetic retinopathy scanner running directly on edge devices.",
+      "problem": "Rural clinics find medical computer vision solutions expensive to build and deploy locally.",
+      "tech": [
+        "TensorFlow",
+        "React Native",
+        "Flask",
+        "OpenCV"
+      ],
+      "codeUrl": "https://github.com/alex-mercer/medai-diagnostix",
+      "demoUrl": "",
+      "progress": 100,
+      "deadline": "2026-05-15",
+      "members": [
+        "Alex Mercer",
+        "Sana Patel",
+        "John Doe"
+      ]
+    }
+  ],
+  "hackathons": [
+    {
+      "id": "h1",
+      "name": "Global AI Hack 2026",
+      "status": "Won",
+      "date": "2026-04-10",
+      "submissionTitle": "MindBridge AI",
+      "prize": "1st Place (AI Track) - $5,000",
+      "certificateUrl": "mindbridge_cert.pdf",
+      "members": [
+        "Alex Mercer",
+        "John Doe"
+      ],
+      "projectLink": "https://devpost.com/software/mindbridge"
+    },
+    {
+      "id": "h2",
+      "name": "Stanford Bio-Hacks",
+      "status": "Accepted",
+      "date": "2026-06-28",
+      "submissionTitle": "NeuroQuant",
+      "prize": "TBD",
+      "certificateUrl": "",
+      "members": [
+        "Alex Mercer",
+        "Sana Patel"
+      ],
+      "projectLink": ""
+    },
+    {
+      "id": "h3",
+      "name": "CalHacks 12.0",
+      "status": "Submitted",
+      "date": "2026-05-20",
+      "submissionTitle": "GreenChain Protocol",
+      "prize": "Community Choice Finalist",
+      "certificateUrl": "greenchain_cert.pdf",
+      "members": [
+        "Alex Mercer",
+        "John Doe",
+        "Devin Smith"
+      ],
+      "projectLink": "https://devpost.com/software/greenchain"
+    }
+  ],
+  "internships": [
+    {
+      "id": "i1",
+      "company": "Google AI Research",
+      "role": "Machine Learning Intern",
+      "status": "Interviewing",
+      "interviewDate": "2026-06-15",
+      "feedback": "Strong technical screening; coding round passed.",
+      "offerLetter": ""
+    },
+    {
+      "id": "i2",
+      "company": "Stripe",
+      "role": "Software Engineer Intern",
+      "status": "Applied",
+      "interviewDate": "",
+      "feedback": "",
+      "offerLetter": ""
+    },
+    {
+      "id": "i3",
+      "company": "NVIDIA",
+      "role": "CUDA Developer Intern",
+      "status": "Applied",
+      "interviewDate": "",
+      "feedback": "",
+      "offerLetter": ""
+    }
+  ],
+  "achievements": [
+    {
+      "id": "a1",
+      "title": "Google Cloud Scholar Badge",
+      "type": "Certification",
+      "issuer": "Qwiklabs",
+      "date": "2026-02-18",
+      "documentUrl": "gcp_badge.png"
+    },
+    {
+      "id": "a2",
+      "title": "Kaggle Bronze Medal (House Prices)",
+      "type": "Coding Contest Wins",
+      "issuer": "Kaggle",
+      "date": "2026-03-05",
+      "documentUrl": "kaggle_bronze.png"
+    },
+    {
+      "id": "a3",
+      "title": "DeepLearning.AI TensorFlow Specialization",
+      "type": "Certifications",
+      "issuer": "Coursera",
+      "date": "2025-11-20",
+      "documentUrl": "coursera_tf.pdf"
+    }
+  ],
+  "documents": [
+    {
+      "id": "d1",
+      "name": "Alex_Mercer_Resume.pdf",
+      "type": "Resume",
+      "folder": "Career",
+      "date": "2026-06-01",
+      "ocrContent": "Alex Mercer. Stanford CS. GPA 3.92. Technical Skills: Flutter, Python, TypeScript, Machine Learning, TensorFlow. Works: StudentOS, MedAI Diagnostix. Prior experience: Open Source Developer.",
+      "tags": [
+        "resume",
+        "stanford",
+        "education"
+      ]
+    },
+    {
+      "id": "d2",
+      "name": "Official_Semester_5_Transcript.pdf",
+      "type": "Mark Sheets",
+      "folder": "Academics",
+      "date": "2026-01-15",
+      "ocrContent": "Stanford University Transcript. Course Code CS-301: A+, CS-352: A, CS-312: A. Semester GPA: 3.95. Cumulative GPA: 3.92.",
+      "tags": [
+        "grades",
+        "transcript",
+        "fifth_semester"
+      ]
+    }
+  ],
+  "goals": [
+    {
+      "id": "g1",
+      "title": "Achieve a cumulative GPA of 3.93 by end of 6th sem",
+      "targetDate": "2026-07-15",
+      "completed": false,
+      "category": "Academic"
+    },
+    {
+      "id": "g2",
+      "title": "Secure a full-time returning internship in artificial intelligence",
+      "targetDate": "2026-06-30",
+      "completed": false,
+      "category": "Career"
+    },
+    {
+      "id": "g3",
+      "title": "Complete 2 detailed peer-reviewed research drafts",
+      "targetDate": "2026-08-30",
+      "completed": true,
+      "category": "Research"
+    }
+  ],
+  "diary_entries": [
+    {
+      "id": "de1",
+      "date": "2026-06-08",
+      "mood": "Excited",
+      "content": "Had a breakthroughs implementing the vector search integration on device! The cosine similarity queries are responding in less than 4ms. Team call was super productive.",
+      "reflection": "Focus on finalizing index compression strategies tomorrow."
+    },
+    {
+      "id": "de2",
+      "date": "2026-06-09",
+      "mood": "Stressed",
+      "content": "Midterm grades for Cloud Computations came out. I scored 82/100 which is slightly below standard. Had to spend extra hours in the library rewriting notes on distributed consensus.",
+      "reflection": "Schedule 2 extra office-hours calls with professor."
+    }
+  ],
+  "friends": []
+}
