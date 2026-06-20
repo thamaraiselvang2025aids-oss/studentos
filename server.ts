@@ -202,7 +202,7 @@ Keep replies action-oriented, professional, and visually formatted with Markdown
 
     // Add context to the first prompt or as system instructions
     const response = await ai.models.generateContent({
-      model: "gemini-3.5-flash",
+      model: "gemini-2.0-flash",
       contents: payloadContents,
       config: {
         systemInstruction: contextText,
@@ -282,7 +282,7 @@ Return your response strictly in valid JSON format matching this schema:
 
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-3.5-flash",
+      model: "gemini-2.0-flash",
       contents: "Analyze student placement and startup readiness.",
       config: {
         systemInstruction: contextText,
@@ -352,7 +352,7 @@ Provide a concise, direct memory response matching the exact factual truth insid
 
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-3.5-flash",
+      model: "gemini-2.0-flash",
       contents: `Search memory for: "${query}"`,
       config: { systemInstruction: contextText }
     });
@@ -411,7 +411,7 @@ Output JSON in this format:
 
   try {
     const response = await ai.models.generateContent({
-      model: "gemini-3.5-flash",
+      model: "gemini-2.0-flash",
       contents: "Analyze journal and give micro suggestions",
       config: {
         systemInstruction: systemPrompt,
@@ -448,7 +448,7 @@ app.post("/api/ai/ocr", async (req, res) => {
   try {
     // Generate intelligent extraction
     const response = await ai.models.generateContent({
-      model: "gemini-3.5-flash",
+      model: "gemini-2.0-flash",
       contents: `Simulate high fidelity OCR text extraction, tag tagging and category classification for file name: "${docName}"`,
       config: {
         systemInstruction: `You are the StudentOS OCR Extraction Engine.
