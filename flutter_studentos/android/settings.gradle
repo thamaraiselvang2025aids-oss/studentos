@@ -1,0 +1,34 @@
+pluginManagement {
+    def flutterSdkPath = {
+        def properties = new Properties()
+        def propertiesFile = new File(settingsDir, '../local.properties')
+        if (propertiesFile.exists()) {
+            propertiesFile.withReader('UTF-8') { reader -> properties.load(reader) }
+        }
+        def sdkPath = properties.getProperty('flutter.sdk')
+        if (sdkPath == null) {
+            sdkPath = System.getenv('FLUTTER_ROOT')
+        }
+        if (sdkPath == null) {
+            sdkPath = "D:\\flutter" // Fallback local directory path from the user's terminal error trace
+        }
+        return sdkPath
+    }
+    settings.ext.flutterSdkPath = flutterSdkPath()
+
+    includeBuild("${settings.ext.flutterSdkPath}/packages/flutter_tools/gradle")
+
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+plugins {
+    id "dev.flutter.flutter-gradle-plugin" version "1.0.0" apply false
+    id "com.android.application" version "8.3.2" apply false
+    id "org.jetbrains.kotlin.android" version "1.9.21" apply false
+}
+
+include ":app"

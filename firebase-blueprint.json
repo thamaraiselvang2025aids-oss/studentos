@@ -1,0 +1,50 @@
+{
+  "entities": {
+    "User": {
+      "title": "User",
+      "description": "Student user profile details with dynamic cross-platform states",
+      "type": "object",
+      "properties": {
+        "uid": { "type": "string", "description": "Unique identifier matching the auth UID" },
+        "name": { "type": "string", "description": "Student full name" },
+        "email": { "type": "string", "description": "Student email address" },
+        "mobile": { "type": "string", "description": "Student mobile phone number" },
+        "college": { "type": "string", "description": "College or University name" },
+        "major": { "type": "string", "description": "Department major pathway" },
+        "semester": { "type": "string", "description": "Current semester selection" },
+        "createdAt": { "type": "string", "description": "ISO-8601 creation timestamp string" },
+        "updatedAt": { "type": "string", "description": "ISO-8601 update timestamp string" },
+        "tasks": { "type": "array", "description": "List of active tasks" },
+        "subjects": { "type": "array", "description": "List of active courses and syllabus info" },
+        "documents": { "type": "array", "description": "Student document vault files catalog" },
+        "internships": { "type": "array", "description": "Active student internships pipeline tracking list" }
+      },
+      "required": ["uid", "name", "email", "college", "major", "semester"]
+    },
+    "Notification": {
+      "title": "Notification",
+      "description": "Real-time notification pushed alerts",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Notification document identifier" },
+        "title": { "type": "string", "description": "Header title of the pushed alert event" },
+        "message": { "type": "string", "description": "Detailed text content of the alert" },
+        "type": { "type": "string", "description": "Severity categorization: success | info | warning" },
+        "timestamp": { "type": "string", "description": "ISO timestamp when the alert generated" },
+        "read": { "type": "boolean", "description": "Status whether the user clicked/dismissed the alert" },
+        "category": { "type": "string", "description": "Alert subtype: deadline | exam | internship | custom" }
+      },
+      "required": ["id", "title", "message", "type", "timestamp", "read"]
+    }
+  },
+  "firestore": {
+    "users/{uid}": {
+      "schema": "User",
+      "description": "User profiles and synchronized lists indexed by student auth UID"
+    },
+    "users/{uid}/notifications/{notifId}": {
+      "schema": "Notification",
+      "description": "Sub-collection for pushed real-time notifications"
+    }
+  }
+}

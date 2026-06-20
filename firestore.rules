@@ -1,0 +1,61 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Default-deny catch-all for zero-trust posture
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Core Security & Identity Primitives
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isOwner(uid) {
+      return isSignedIn() && request.auth.uid == uid;
+    }
+
+    function isValidId(id) {
+      return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    // Zero-Trust Validation Blueprints
+    function isValidUser(data) {
+      return data.uid is string 
+        && data.name is string && data.name.size() <= 200
+        && data.email is string && data.email.size() <= 200
+        && data.college is string && data.college.size() <= 200
+        && data.major is string && data.major.size() <= 200
+        && data.semester is string && data.semester.size() <= 100;
+    }
+
+    function isValidNotification(data) {
+      return data.id is string && data.id.size() <= 128
+        && data.title is string && data.title.size() <= 250
+        && data.message is string && data.message.size() <= 1000
+        && data.type is string && (data.type == 'success' || data.type == 'info' || data.type == 'warning')
+        && data.timestamp is string && data.timestamp.size() <= 50
+        && data.read is bool;
+    }
+
+    // Hardened Resource Paths
+    match /users/{uid} {
+      allow get: if isOwner(uid) && isValidId(uid);
+      allow create: if isOwner(uid) && isValidId(uid) && isValidUser(incoming());
+      allow update: if isOwner(uid) && isValidId(uid) && isValidUser(incoming());
+      allow delete: if isOwner(uid) && isValidId(uid);
+
+      match /notifications/{notifId} {
+        allow read: if isOwner(uid) && isValidId(notifId);
+        allow create: if isOwner(uid) && isValidId(notifId) && isValidNotification(incoming());
+        allow update: if isOwner(uid) && isValidId(notifId) && isValidNotification(incoming());
+        allow delete: if isOwner(uid) && isValidId(notifId);
+      }
+    }
+  }
+}
